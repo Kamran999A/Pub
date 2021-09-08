@@ -1,0 +1,82 @@
+﻿<Window x:Class="WpfApp_Buying_App.Views.ShowHistoryWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp_Buying_App.Views"
+        mc:Ignorable="d"
+        Title="Payments" Height="450" Width="800" WindowStartupLocation="CenterScreen">
+
+    <Grid>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="15*"/>
+            <RowDefinition Height="85*"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20" FontFamily="Palatino Linotype"
+                   TextWrapping="Wrap" Foreground="Red">Buyings</TextBlock>
+
+
+        <ListView Grid.Row="1" ItemsSource="{Binding Payments}" FontSize="20" ScrollViewer.HorizontalScrollBarVisibility="Disabled">
+
+            <ListView.ItemContainerStyle>
+                <Style TargetType="ListViewItem">
+                    <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
+                </Style>
+            </ListView.ItemContainerStyle>
+
+            <ListView.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <WrapPanel Orientation="Vertical"></WrapPanel>
+                </ItemsPanelTemplate>
+            </ListView.ItemsPanel>
+            
+            <ListView.View>
+
+                <GridView>
+
+                    <GridViewColumn Header="Drink Image" Width="200" >
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <Image Stretch="Fill" Source="{Binding Drink.ImagePath}"/>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+
+                    <GridViewColumn  Header="Drink Name" Width="200">
+
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBlock Text="{Binding Drink.Name}" TextWrapping="Wrap" TextAlignment="Center"/>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+
+                    </GridViewColumn>
+
+                    <GridViewColumn Header="Amount Bought" Width="200">
+
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBlock Text="{Binding AmountOfDrink}" TextWrapping="Wrap" TextAlignment="Center"></TextBlock>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+
+                    </GridViewColumn>
+
+                    <GridViewColumn Header="Price $" Width="200">
+
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBlock Text="{Binding Drink.Price}" TextWrapping="Wrap" TextAlignment="Center"></TextBlock>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+
+                    </GridViewColumn>
+                </GridView>
+            </ListView.View>
+        </ListView>
+
+
+    </Grid>
+</Window>
