@@ -48,7 +48,7 @@ namespace WpfApp_Buying_App.Repo
                     Volume = 23.5,
                     About = "Every night in fight.",
                     Price = 30,
-                    ImagePath = "/DrinksImages/TULLAMORE DEW VİSKİ LT.png"
+                    ImagePath = "/DrinksImages/TULLAMORE DEW VİSKİ LT.jpg"
                 },
 
                 new Drink
@@ -57,7 +57,7 @@ namespace WpfApp_Buying_App.Repo
                     Volume = 14.5,
                     About = "SUCH a beautiful drink!",
                     Price = 25,
-                    ImagePath = "/DrinksImages/JACK DANIEL'S TENNESSEE VİSKİ 0.7 LT.jpg"
+                    ImagePath = "/DrinksImages/JACK DANIEL'S TENNESSEE VİSKİ LT.jpg"
                 },
 
                 new Drink

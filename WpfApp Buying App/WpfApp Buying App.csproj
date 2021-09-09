@@ -176,7 +176,7 @@
     <Resource Include="DrinksImages\JOHNNIE WALKER RED LABEL VİSKİ 1 LT.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="DrinksImages\TULLAMORE DEW VİSKİ 0.7 LT.jpg" />
+    <Resource Include="DrinksImages\TULLAMORE DEW VİSKİ LT.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
